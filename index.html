@@ -253,7 +253,7 @@
     </style>
 </head>
 
-  <audio autoplay loop>
+  <audio id="bg-music" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -529,6 +529,13 @@
                 requestAnimationFrame(updateConfetti);
             }
         }
+
+    
+  document.addEventListener("click", function () {
+    const audio = document.getElementById("bg-music");
+    audio.play();
+  }, { once: true });
+
     </script>
 </body>
 
